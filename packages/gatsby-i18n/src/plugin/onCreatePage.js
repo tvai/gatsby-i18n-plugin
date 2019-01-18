@@ -2,7 +2,7 @@ import path from 'path';
 
 const onCreatePage = ({ page, actions }, pluginOptions) => {
   const { createPage, deletePage } = actions;
-  const { fallbackLng, availableLngs, siteUrl, debug, redirectPages, hideFallbackLng } = pluginOptions;
+  const { fallbackLng, availableLngs, siteUrl, debug, redirectPages = true, hideFallbackLng = false } = pluginOptions;
 
   if (page.path.includes('dev-404')) {
     return Promise.resolve();
