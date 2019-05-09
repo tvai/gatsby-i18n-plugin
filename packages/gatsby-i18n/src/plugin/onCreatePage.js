@@ -2,15 +2,21 @@ import path from 'path';
 
 const onCreatePage = ({ page, actions }, pluginOptions) => {
   const { createPage, deletePage } = actions;
-  const { fallbackLng, availableLngs, siteUrl, debug, redirectFallback = true } = pluginOptions;
+  const {
+    fallbackLng,
+    availableLngs,
+    siteUrl,
+    debug,
+    redirectFallback = true,
+  } = pluginOptions;
 
   if (page.path.includes('dev-404')) {
     return Promise.resolve();
   }
 
   return new Promise(resolve => {
-    if(redirectFallback){
-      const redirect = path.resolve('./.cache/@igorko/redirect.js');
+    if (redirectFallback) {
+      const redirect = path.resolve('./.cache/@grsmto/redirect.js');
       const redirectPage = {
         ...page,
         component: redirect,
@@ -33,7 +39,10 @@ const onCreatePage = ({ page, actions }, pluginOptions) => {
     availableLngs.forEach(lng => {
       const localePage = {
         ...page,
-        path: lng == fallbackLng && !redirectFallback ? page.path : `/${lng}${page.path}`,
+        path:
+          lng == fallbackLng && !redirectFallback
+            ? page.path
+            : `/${lng}${page.path}`,
         context: {
           ...page.context,
           availableLngs,

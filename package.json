@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "build": "lerna run build",
-    "build:watch": "lerna run build:watch --parallel --scope @igorko/*",
+    "build:watch": "lerna run build:watch --parallel --scope @grsmto/*",
     "deploy": "lerna run deploy --concurrency 1 --scope gatsby-starter*"
   },
   "devDependencies": {

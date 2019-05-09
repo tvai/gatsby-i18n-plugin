@@ -31,7 +31,7 @@ const onCreateNode = async ({
   //   if (mediaType === `application/json`) return;
 
   const activity = reporter.activityTimer(
-    `@igorko: create node: ${relativeDirectory}_${name}`,
+    `@grsmto: create node: ${relativeDirectory}_${name}`,
   );
   activity.start();
 

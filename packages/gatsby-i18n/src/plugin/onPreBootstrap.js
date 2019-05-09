@@ -1,17 +1,17 @@
 import fs from 'fs-extra';
 
 export const onPreBootstrap = ({ store, reporter }) => {
-  const activity = reporter.activityTimer('@igorko: copy redirect component');
+  const activity = reporter.activityTimer('@grsmto: copy redirect component');
   activity.start();
 
   const program = store.getState().program;
 
   const module = `
-      const { Redirect } = require('gatsby-i18n');
+      const { Redirect } = require('@grsmto/gatsby-i18n');
       module.exports = Redirect;
   `;
 
-  const dir = `${program.directory}/.cache/@igorko`;
+  const dir = `${program.directory}/.cache/@grsmto`;
 
   if (!fs.existsSync(dir)) {
     fs.mkdirSync(dir);
