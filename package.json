@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "build": "lerna run build --scope @igorko/*",
+    "build": "lerna run build",
     "build:watch": "lerna run build:watch --parallel --scope @igorko/*",
     "deploy": "lerna run deploy --concurrency 1 --scope gatsby-starter*"
   },
@@ -30,7 +30,6 @@
     "prettier": "^1.13.7"
   },
   "workspaces": [
-    "packages/*",
-    "starters/*"
+    "packages/*"
   ]
 }
