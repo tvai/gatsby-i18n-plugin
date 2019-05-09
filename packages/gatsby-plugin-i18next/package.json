@@ -21,7 +21,7 @@
   },
   "dependencies": {
     "@babel/runtime": "^7.1.2",
-    "gatsby-i18n": "^1.1.5",
+    "@grsmto/gatsby-i18n": "^1.1.6",
     "i18next": "11.6.0",
     "i18next-xhr-backend": "1.5.1",
     "react-i18next": "7.10.1"
