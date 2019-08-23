@@ -6,6 +6,13 @@
 
 This repository is a monorepo managed with [Lerna](https://github.com/lerna/lerna). [Several packages](/packages) are published to npm from the same codebase.
 
+## Installation (for gatsby-plugin-i18next)
+
+```sh
+yarn add @tvai/gatsby-plugin-i18next
+# npm install --save @tvai/gatsby-plugin-i18next
+```
+
 ## Notes
 
 Forked from a fork of the [original repo](https://github.com/ikhudo/gatsby-i18n-plugin). The original implementation required all lang routes to have a prefix in the url, eg: `/en/post`, a 2nd fork added some tweaks that allowed for redirectFallback to be set to true or false, allowing the user to choose whether to generate default fallback language with a url prefix or not.
