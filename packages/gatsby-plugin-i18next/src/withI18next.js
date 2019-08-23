@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { I18nextProvider } from 'react-i18next';
-import { I18nProvider } from '@grsmto/gatsby-i18n';
+import { I18nProvider } from '@tvai/gatsby-i18n';
 
 import setupI18next from './setupI18next';
 

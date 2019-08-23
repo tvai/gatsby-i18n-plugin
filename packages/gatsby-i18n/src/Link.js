@@ -4,9 +4,23 @@ import { Link as GatsbyLink } from 'gatsby';
 
 import { I18nConsumer } from './I18nContext';
 
-const Link = ({ to, lng, children, ...rest }) => {
+const Link = ({
+  to,
+  lng,
+  fallbackLng,
+  redirectFallback,
+  children,
+  ...rest
+}) => {
   return (
-    <GatsbyLink to={lng ? `/${lng}${to}` : `${to}`} {...rest}>
+    <GatsbyLink
+      to={
+        (lng && lng !== fallbackLng) || redirectFallback
+          ? `/${lng}${to}`
+          : `${to}`
+      }
+      {...rest}
+    >
       {children}
     </GatsbyLink>
   );
@@ -18,5 +32,14 @@ Link.propTypes = {
 };
 
 export default props => (
-  <I18nConsumer>{({ lng }) => <Link lng={lng} {...props} />}</I18nConsumer>
+  <I18nConsumer>
+    {({ lng, fallbackLng, redirectFallback }) => (
+      <Link
+        lng={lng}
+        fallbackLng={fallbackLng}
+        redirectFallback={redirectFallback}
+        {...props}
+      />
+    )}
+  </I18nConsumer>
 );
