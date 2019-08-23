@@ -3,4 +3,4 @@ export {
   onCreateNode,
   onPreExtractQueries,
   onCreatePage,
-} from '@grsmto/gatsby-i18n/plugin';
+} from '@tvai/gatsby-i18n/plugin';

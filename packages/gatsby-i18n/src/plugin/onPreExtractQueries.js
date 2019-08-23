@@ -19,7 +19,7 @@ const onPreExtractQueries = async ({ store, getNodes }, pluginOptions) => {
       }
     \`;
 `;
-  const file = `${program.directory}/.cache/fragments/@grsmto/fragments.js`;
+  const file = `${program.directory}/.cache/fragments/@tvai/fragments.js`;
 
   await fs.outputFile(file, fragment);
 };
