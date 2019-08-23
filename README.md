@@ -14,13 +14,38 @@ There's 2 main issues that the fork patches:
 
 1. Using the original plugin, or setting `redirectFallback: true`, works fine. However, this means that the root index.html that `gatsby build` generates will not contain the fully generated html (that usually includes your SEO tags), as an index.html with redirect component replaces it. This means crawlers such as Facebook's Debugger may not see the full index.html and interpret tags accurately. (If you are hosting your Gatsby site on Netlify, you may be able to fix that by enabling Netlify's pre-render).
 
-2. After disabling redirectFallback, the <Link /> behaviour needs to adapt so that it continues to work correctly. Disablign redirectFallback also prevents the lang cookie from being saved. (You could easily manually control which url to route the user to on one of your main entry points after custom location/browser language detection work).
+2. After disabling redirectFallback, the Link behaviour needs to adapt so that it continues to work correctly. Disabling redirectFallback also prevents the lang cookie from being saved. (You could easily manually control which url to route the user to on one of your main entry points after custom location/browser language detection work).
 
 The react-i18next package dependency is also relatively outdated and needs to be updated. However, this fork doesn't handle that yet, as the hotfixes above were needed urgently.
 
-## Starters
+# Options
 
-### gatsby-starter-i18next
+You can pass options to the plugin:
+
+- availableLngs (Array [required])
+- fallbackLng (String [required])
+- redirectFallback (Boolean [required])
+- siteUrl (String [optional])
+
+For example:
+
+```js
+module.exports = {
+  plugins: [
+    {
+      resolve: `@tvai/gatsby-plugin-i18next`,
+      options: {
+        availableLngs: ['en', 'de'],
+        fallbackLng: 'en',
+        siteUrl: 'https://www.example.com/',
+      },
+    },
+  ],
+};
+```
+
+
+### gatsby-starter-i18next (Orig)
 
 [Demo](https://hupe1980.github.io/gatsby-i18n/gatsby-starter-i18next) [Source](/starters/gatsby-starter-i18next)
 
