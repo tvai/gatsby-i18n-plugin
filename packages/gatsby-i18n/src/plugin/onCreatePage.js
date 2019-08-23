@@ -16,7 +16,7 @@ const onCreatePage = ({ page, actions }, pluginOptions) => {
 
   return new Promise(resolve => {
     if (redirectFallback) {
-      const redirect = path.resolve('./.cache/@grsmto/redirect.js');
+      const redirect = path.resolve('./.cache/@tvai/redirect.js');
       const redirectPage = {
         ...page,
         component: redirect,
@@ -28,6 +28,7 @@ const onCreatePage = ({ page, actions }, pluginOptions) => {
           lng: null,
           routed: false,
           redirectPage: page.path,
+          redirectFallback,
           siteUrl,
         },
       };
@@ -50,6 +51,7 @@ const onCreatePage = ({ page, actions }, pluginOptions) => {
           lng,
           routed: true,
           originalPath: page.path,
+          redirectFallback,
           siteUrl,
           debug,
         },
