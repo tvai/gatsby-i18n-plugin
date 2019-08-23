@@ -1,9 +1,9 @@
 {
-  "name": "@grsmto/gatsby-plugin-i18next",
+  "name": "@tvai/gatsby-plugin-i18next",
   "description": "Gatsby plugin that provides i18n support",
   "version": "1.1.9",
-  "author": "grsmto82@me.com",
-  "repository": "grsmto/gatsby-i18n-plugin",
+  "author": "tvai.gr@gmail.com",
+  "repository": "tvai/gatsby-i18n-plugin",
   "keywords": [
     "react",
     "gatsby",
@@ -21,7 +21,7 @@
   },
   "dependencies": {
     "@babel/runtime": "^7.1.2",
-    "@grsmto/gatsby-i18n": "^1.1.7",
+    "@tvai/gatsby-i18n": "^1.1.7",
     "i18next": "11.6.0",
     "i18next-xhr-backend": "1.5.1",
     "react-i18next": "7.10.1"
