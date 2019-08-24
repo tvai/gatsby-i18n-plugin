@@ -47,8 +47,31 @@ module.exports = {
         siteUrl: 'https://www.example.com/',
       },
     },
+    
+    // Ensure that Gatsby knows to retrieve files from your locale folder.
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `locale`,
+        path: `${__dirname}/locale`
+      }
+    },
   ],
 };
+```
+
+locale folder:
+
+- place at root of Gatsby project alongside `src`.
+
+```
+locale
+  en
+    messages.json
+  es
+    messages.json
+public
+src
 ```
 
 
