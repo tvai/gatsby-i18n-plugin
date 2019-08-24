@@ -22,9 +22,9 @@
   "dependencies": {
     "@babel/runtime": "^7.1.2",
     "@tvai/gatsby-i18n": "^1.1.9",
-    "i18next": "11.6.0",
-    "i18next-xhr-backend": "1.5.1",
-    "react-i18next": "7.10.1"
+    "i18next": "15.1.0",
+    "i18next-xhr-backend": "2.0.1",
+    "react-i18next": "10.6.1"
   },
   "peerDependencies": {
     "gatsby": ">2.0.0-alpha"
